@@ -1,0 +1,4 @@
+[33m3eff3fd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Add Git LFS tracking for PDF files
+[33m97bbb8a[m Initial commit with portfolio website and PDFs
+[33m67e8f8e[m Remove large PDF files and update .gitignore
+[33ma560bd9[m Initial commit: Portfolio website with Next.js, Tailwind CSS, and interactive sections
