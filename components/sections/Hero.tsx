@@ -41,7 +41,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-blue-50 to-indigo-100 dark:from-dark-900 dark:via-dark-800 dark:to-dark-700">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-blue-50 to-indigo-100 dark:from-dark-900 dark:via-dark-800 dark:to-dark-700 pt-safe pb-safe">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-72 h-72 bg-primary-400 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
@@ -49,7 +49,7 @@ export default function Hero() {
         <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="container-max section-padding relative z-10 flex flex-col justify-center min-h-screen">
+      <div className="container-max section-padding relative z-10 flex flex-col justify-center min-h-screen pt-8 md:pt-0">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Content */}
           <motion.div
