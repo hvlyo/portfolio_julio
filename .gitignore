@@ -44,5 +44,5 @@ temp_content.txt
 node_modules
 
 # Large files
-*.pdf
-public/decks/*.pdf
+# *.pdf
+# public/decks/*.pdf
