@@ -49,7 +49,7 @@ export default function Hero() {
         <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="container-max section-padding relative z-10 flex flex-col justify-center min-h-screen pt-8 md:pt-0">
+      <div className="container-max section-padding relative z-10 flex flex-col justify-center min-h-screen pt-8 md:pt-0 pb-16 md:pb-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Content */}
           <motion.div
@@ -157,7 +157,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.6 }}
-          className="flex justify-center"
+          className="flex justify-center mb-8 md:mb-12"
         >
           <motion.button
             onClick={scrollToContact}
@@ -176,7 +176,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2 }}
-        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10"
+        className="absolute bottom-8 md:bottom-6 left-1/2 transform -translate-x-1/2 z-10"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
