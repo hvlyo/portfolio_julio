@@ -38,7 +38,6 @@ const decks: Deck[] = [
     category: "Partnership",
     date: "July 2025",
     audience: "DEG",
-    fileUrl: "/decks/DEG.pdf",
     previewUrl: "https://www.canva.com/design/DAGsZkbRfvg/GIkYWWp8Oo_83kcOqTDp1Q/view?utm_content=DAGsZkbRfvg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h262596e95f",
     slides: 11
   },
