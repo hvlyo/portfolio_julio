@@ -13,7 +13,7 @@ interface Deck {
   category: string
   date: string
   audience: string
-  fileUrl: string
+  fileUrl?: string
   previewUrl?: string
   slides: number
 }
@@ -27,7 +27,6 @@ const decks: Deck[] = [
     category: "Sponsorship",
     date: "November 2024",
     audience: "Maya",
-    fileUrl: "/decks/Maya.pdf",
     previewUrl: "https://www.canva.com/design/DAGRRIwRTG0/wuI0l4zNrRb6Pjf_u3gAZA/view?utm_content=DAGRRIwRTG0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h896df531c2",
     slides: 48
   },
@@ -83,7 +82,11 @@ export default function Decks() {
     // In a real app, this would trigger a download
     console.log(`Downloading ${deck.title}`)
     // For demo purposes, we'll just open in a new tab
-    window.open(deck.fileUrl, '_blank')
+    if (deck.fileUrl) {
+      window.open(deck.fileUrl, '_blank')
+    } else {
+      console.log('No file URL available for download')
+    }
   }
 
   const handlePreview = (deck: Deck) => {
@@ -224,16 +227,21 @@ export default function Decks() {
                         <Play size={16} />
                         <span>Preview</span>
                       </button>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          handleDownload(deck)
-                        }}
-                        className="flex-1 flex items-center justify-center space-x-2 px-3 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium transition-colors"
-                      >
-                        <Download size={16} />
-                        <span>Download</span>
-                      </button>
+                                             <button
+                         onClick={(e) => {
+                           e.stopPropagation()
+                           handleDownload(deck)
+                         }}
+                         disabled={!deck.fileUrl}
+                         className={`flex-1 flex items-center justify-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                           deck.fileUrl
+                             ? 'bg-primary-600 hover:bg-primary-700 text-white'
+                             : 'bg-gray-100 dark:bg-dark-700 text-gray-400 dark:text-dark-500 cursor-not-allowed'
+                         }`}
+                       >
+                         <Download size={16} />
+                         <span>Download</span>
+                       </button>
                     </div>
                   </div>
                 </div>
@@ -314,13 +322,18 @@ export default function Decks() {
                       <span>Preview</span>
                     </button>
                   )}
-                  <button
-                    onClick={() => handleDownload(selectedDeck)}
-                    className="flex items-center space-x-2 px-4 py-2 bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600 rounded-lg transition-colors"
-                  >
-                    <Download size={16} />
-                    <span>Download PDF</span>
-                  </button>
+                                     <button
+                     onClick={() => handleDownload(selectedDeck)}
+                     disabled={!selectedDeck.fileUrl}
+                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
+                       selectedDeck.fileUrl
+                         ? 'bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600'
+                         : 'bg-gray-100 dark:bg-dark-700 text-gray-400 dark:text-dark-500 cursor-not-allowed'
+                     }`}
+                   >
+                     <Download size={16} />
+                     <span>Download PDF</span>
+                   </button>
                   <button
                     onClick={() => setSelectedDeck(null)}
                     className="px-4 py-2 border border-gray-300 dark:border-dark-600 hover:bg-gray-50 dark:hover:bg-dark-700 rounded-lg transition-colors"
