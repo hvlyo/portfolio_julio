@@ -30,12 +30,32 @@ const caseStudies: CaseStudy[] = [
     duration: "3 months",
     team: "1 Promotions Manager",
          technologies: ["Sales", "Marketing", "Branding", "Event Management"],
-    link: "https://example.com",
+    link: "https://docs.google.com/document/d/1dCqvLiIvbZufHwWFFFV312RmtT2lacEeDIvw_mAGpZM/edit?usp=sharing",
     content: `
-      <h3>Project Overview</h3>
-      <p>No description available.</p>
-      <ul>
-      </ul>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400 mb-3">Project Overview</h3>
+          <p class="text-dark-700 dark:text-dark-300 leading-relaxed">For Ateneo Blue Repertory's 32nd Season Finale, an original twin-bill musical, I was tasked with reviving ticket sales after the opening weekend filled only 16–25% of seats. With just ₱2,000 left in the budget and only three days to act, the challenge was clear: reestablish ticket value, drive urgency, and fill the theater.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400 mb-3">Strategy & Execution</h3>
+          <p class="text-dark-700 dark:text-dark-300 leading-relaxed">Promoted to PR Deputy mid-run, I shifted focus from passive social media posting to active, campus-first engagement. I spearheaded a university-wide email blast with the subject line "FREE TICKETS?!" to grab attention, then launched a riddle-based treasure hunt using existing tarpaulins across campus. This guerrilla-style tactic sparked FOMO, boosted visibility, and created conversations that social alone wasn't achieving.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400 mb-3">Results & Impact</h3>
+          <div class="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 rounded-r-lg">
+            <p class="text-dark-700 dark:text-dark-300 leading-relaxed font-medium">The results were immediate and measurable: within one week, sales jumped <span class="text-green-600 dark:text-green-400 font-bold">300%</span>, average capacity rose to <span class="text-green-600 dark:text-green-400 font-bold">70%</span>, and the show broke even on its final day.</p>
+          </div>
+          <p class="text-dark-700 dark:text-dark-300 leading-relaxed mt-3">Beyond numbers, the campaign restored ticket value perception, generated positive audience feedback, and set a new benchmark for PR strategy within the organization.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400 mb-3">Key Learnings</h3>
+          <p class="text-dark-700 dark:text-dark-300 leading-relaxed">This experience sharpened my ability to think creatively under pressure, proving that with the right message and medium, even low-budget campaigns can deliver outsized impact.</p>
+        </div>
+      </div>
     `
   },
   {
@@ -221,26 +241,28 @@ export default function CaseStudies() {
               </div>
 
               {/* Modal Content */}
-              <div className="p-6 space-y-6">
+              <div className="p-8 space-y-8">
                 {/* Meta Info */}
-                <div className="flex flex-wrap gap-4 text-sm text-dark-500 dark:text-dark-400">
-                  <div className="flex items-center space-x-2">
-                    <Calendar size={16} />
-                    <span>{selectedCase.duration}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Users size={16} />
-                    <span>{selectedCase.team}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Code size={16} />
-                    <span>{selectedCase.technologies.join(', ')}</span>
+                <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-6">
+                  <div className="flex flex-wrap gap-6 text-sm text-dark-600 dark:text-dark-300">
+                    <div className="flex items-center space-x-2">
+                      <Calendar size={18} className="text-primary-600 dark:text-primary-400" />
+                      <span className="font-medium">{selectedCase.duration}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Users size={18} className="text-primary-600 dark:text-primary-400" />
+                      <span className="font-medium">{selectedCase.team}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Code size={18} className="text-primary-600 dark:text-primary-400" />
+                      <span className="font-medium">{selectedCase.technologies.join(', ')}</span>
+                    </div>
                   </div>
                 </div>
 
                 {/* Content */}
                 <div 
-                  className="prose prose-lg dark:prose-invert max-w-none"
+                  className="prose prose-lg dark:prose-invert max-w-none space-y-8"
                   dangerouslySetInnerHTML={{ __html: selectedCase.content }}
                 />
 

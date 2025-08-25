@@ -6,20 +6,25 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
-  title: 'Your Name - Portfolio',
+  title: 'Julio Velasquez - Portfolio',
   description: 'Personal portfolio showcasing case studies, creative projects, and professional experience.',
   keywords: ['portfolio', 'design', 'development', 'creative', 'case studies'],
-  authors: [{ name: 'Your Name' }],
-  creator: 'Your Name',
+  authors: [{ name: 'Julio Velasquez' }],
+  creator: 'Julio Velasquez',
+  icons: {
+    icon: '/favi.png',
+    shortcut: '/favi.png',
+    apple: '/favi.png',
+  },
   openGraph: {
-    title: 'Your Name - Portfolio',
+    title: 'Julio Velasquez - Portfolio',
     description: 'Personal portfolio showcasing case studies, creative projects, and professional experience.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Your Name - Portfolio',
+    title: 'Julio Velasquez - Portfolio',
     description: 'Personal portfolio showcasing case studies, creative projects, and professional experience.',
   },
   robots: {

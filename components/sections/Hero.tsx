@@ -41,7 +41,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-blue-50 to-indigo-100 dark:from-dark-900 dark:via-dark-800 dark:to-dark-700 pt-safe pb-safe">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-blue-50 to-indigo-100 dark:from-dark-900 dark:via-dark-800 dark:to-dark-700 pt-safe pb-safe pt-28 md:pt-24">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-72 h-72 bg-primary-400 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
@@ -49,7 +49,7 @@ export default function Hero() {
         <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="container-max section-padding relative z-10 flex flex-col justify-center min-h-screen pt-8 md:pt-0 pb-16 md:pb-8">
+      <div className="container-max section-padding relative z-10 flex flex-col justify-center min-h-screen pt-16 md:pt-16 pb-16 md:pb-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Content */}
           <motion.div
@@ -127,6 +127,36 @@ export default function Hero() {
                   <social.icon size={24} className="text-dark-600 dark:text-dark-300" />
                 </motion.a>
               ))}
+            </motion.div>
+
+            {/* CV/Resume Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.6 }}
+              className="flex flex-col sm:flex-row gap-4 pt-4"
+            >
+              <motion.a
+                href="/resume.pdf"
+                download
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center space-x-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 font-medium"
+              >
+                <Download size={20} />
+                <span>Download CV/Resume</span>
+              </motion.a>
+              
+              <motion.a
+                href="https://docs.google.com/document/d/1Y6fn17MCTnbnTujKrwrVb8zZw3J3NXph1B2C7XfjCBE/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center justify-center space-x-2 px-6 py-3 bg-white/80 dark:bg-dark-800/80 backdrop-blur-sm border border-white/20 dark:border-dark-700/20 hover:bg-white dark:hover:bg-dark-700 text-dark-600 dark:text-dark-300 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 font-medium"
+              >
+                <span>Open via Google Docs</span>
+              </motion.a>
             </motion.div>
           </motion.div>
 
