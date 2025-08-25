@@ -28,6 +28,17 @@ const galleryItems: GalleryItem[] = [
     category: "Product",
     tags: ["Photoshop", "Product", "Branding"],
     aspectRatio: 'landscape'
+  },
+  {
+    id: 2,
+    title: "S",
+    description: "Add your description here.",
+    type: 'image',
+    src: "/your-image.jpg",
+    thumbnail: "/your-image.jpg",
+    category: "Category",
+    tags: ["Tag1", "Tag2", "Tag3"],
+    aspectRatio: 'square'
   }
 ]
 
