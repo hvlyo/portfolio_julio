@@ -31,14 +31,14 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 2,
-    title: "S",
-    description: "Add your description here.",
+    title: "Basketball Shoes",
+    description: "Wingspan starts at your feet",
     type: 'image',
-    src: "/your-image.jpg",
-    thumbnail: "/your-image.jpg",
-    category: "Category",
-    tags: ["Tag1", "Tag2", "Tag3"],
-    aspectRatio: 'square'
+    src: "/shoes.png",
+    thumbnail: "/shoes.png",
+    category: "Product",
+    tags: ["Photoshop", "Product", "Branding"],
+    aspectRatio: 'landscape'
   }
 ]
 
@@ -168,9 +168,12 @@ export default function VisualGallery() {
              className={`grid gap-4 ${
                galleryItems.length === 1 
                  ? 'grid-cols-1 max-w-md mx-auto' 
+                 : galleryItems.length === 2
+                 ? 'grid-cols-1 md:grid-cols-2 max-w-2xl mx-auto'
                  : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
              }`}
            >
+             
             {galleryItems.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -187,6 +190,7 @@ export default function VisualGallery() {
                       alt={item.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       loading="lazy"
+                      onError={(e) => console.error('Image failed to load:', item.thumbnail)}
                     />
                     
                     {/* Overlay */}
