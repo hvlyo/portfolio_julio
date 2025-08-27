@@ -35,7 +35,7 @@ const caseStudies: CaseStudy[] = [
       <div class="space-y-6">
         <div>
           <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400 mb-3">Project Overview</h3>
-          <p class="text-dark-700 dark:text-dark-300 leading-relaxed">For Ateneo Blue Repertory's 32nd Season Finale, an original twin-bill musical, I was tasked with reviving ticket sales after the opening weekend filled only 16–25% of seats. With just ₱2,000 left in the budget and only three days to act, the challenge was clear: reestablish ticket value, drive urgency, and fill the theater.</p>
+          <p class="text-dark-700 dark:text-dark-300 leading-relaxed">For Ateneo Blue Repertory's 32nd Season Finale, an original twin-bill musical, I was tasked with reviving ticket sales after the opening weekend filled only 16–25% of seats. PR only had ₱2,000 left for their budget and less than three days to act.</p>
         </div>
         
         <div>
@@ -60,19 +60,56 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: 2,
-    title: "Story-Led Marketing for blueREP’s Production",
-    description: "We developed a progressive, story-driven marketing campaign for blueREP that stood out through its innovative approach and use of emerging advertising channels.",
-    shortDescription: "A progressive, story-driven campaign that leveraged new advertising channels to boost awareness and drive ticket sales.",
+    title: "Marketing with Intention",
+    description: "A case study on how surprising creative strategies not only captured attention but also boosted first-week ticket sales and sustained audience interest for a lesser-known production.",
+    shortDescription: "A case study on how bold creative strategies drove strong first-week sales and sustained audience interest for a niche production.",
     image: "/theprom.jpg",
     category: "Musical",
     duration: "3 months",
     team: "1 Brand Designer",
+    link: "https://docs.google.com/document/d/1pTbcnThrVneuqWd1qMHq-gvHqiJ-7FUM8wRRc8bn_RE/edit?usp=sharing",
     technologies: ["Marketing", "Branding", "Event Management"],
     content: `
-            <h3>Project Overview</h3>
-      <p>No description available.</p>
-      <ul>
-      </ul>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400 mb-3">Project Overview</h3>
+          <p class="text-dark-700 dark:text-dark-300 leading-relaxed">
+            For Ateneo Blue Repertory's 33rd Season Newbie Production, I served as Brand Manager for <em>The Prom</em> — a contemporary musical centered on inclusivity and self-expression. This was my first formal management role, where I was tasked with not only leading the creatives department but also ensuring the campaign delivered both visibility and ticket sales for a production less known than blueREP's flagship shows.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400 mb-3">Strategy & Execution</h3>
+          <p class="text-dark-700 dark:text-dark-300 leading-relaxed">
+            The campaign was designed as a sequenced narrative where each tactic built on the last. We seeded curiosity through subtle PAC posts, then launched a faux "promposal" on Ateneo's LuxID Board — strategically minimal in branding to spark genuine intrigue. This was amplified through freedom wall takeovers across Ateneo, UP, and DLSU, generating over 1,800 likes and strong organic discussion.
+          </p>
+          <p class="text-dark-700 dark:text-dark-300 leading-relaxed mt-3">
+            The centerpiece was a flashmob reveal at Gonzaga Cafeteria, synchronized with an email blast to 13,000 students and a polished After Effects title reveal video. From there, we activated demand through early bird sales and timed promos (including an 11.11 bundle sale), ensuring customer trust while driving momentum.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400 mb-3">Results & Impact</h3>
+          <div class="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 rounded-r-lg">
+            <p class="text-dark-700 dark:text-dark-300 leading-relaxed font-medium">
+              The campaign delivered measurable impact: the title reveal video peaked at 
+              <span class="text-green-600 dark:text-green-400 font-bold">40,000+ views</span> within a week; the 11.11 promo sold 
+              <span class="text-green-600 dark:text-green-400 font-bold">200+ tickets in a single day</span>; and across its run, the production sold 
+              <span class="text-green-600 dark:text-green-400 font-bold">1,163 tickets</span> despite one canceled show, averaging near-full capacity (180 seats) per performance.
+            </p>
+          </div>
+          <p class="text-dark-700 dark:text-dark-300 leading-relaxed mt-3">
+            Beyond numbers, the campaign blurred the line between real and staged experiences — with students, faculty, and even outsiders believing the stunts were genuine — while also rebuilding trust in blueREP's ticketing practices after past consumer frustrations.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-primary-600 dark:text-primary-400 mb-3">Key Learnings</h3>
+          <p class="text-dark-700 dark:text-dark-300 leading-relaxed">
+            Leading my first management role taught me the importance of intentionality in campaign design and the value of aligning creative stunts with measurable goals. By connecting strategy, execution, and storytelling, I learned how surprise-driven marketing can generate sustained attention and drive consistent sales, even for productions without built-in name recognition.
+          </p>
+        </div>
+      </div>
     `
   }
 ]
